@@ -1,0 +1,30 @@
+// Axis Buttons
+.button
+  button: white
+  &.is-red
+    background-color: $red
+    color: white
+    &:hover
+      background-color: darken($red, 2%)
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.15)
+  &.is-mint
+    background-color: $mint
+    &:hover
+      background-color: darken($mint, 2%)
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.15)
+  &.is-gray
+    background-color: $light-gray
+    &:hover
+      background-color: darken($light-gray, 2%)
+      box-shadow: 0px 2px 4px rgba(0,0,0,0.15)
+
+
+// Button Groups
+.button-group
+  .button
+    margin-right: 1em
+
+
+// Modifiers
+.is-large
+  padding: 1.25em 3em

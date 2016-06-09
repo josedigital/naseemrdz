@@ -1,0 +1,126 @@
+
+button.mod
+  background-color: transparent
+  border: none
+  outline: none
+  padding: 2px
+  position: fixed
+  right: 5%
+  top: -20px
+  z-index: 200
+
+.menu
+  height: 40px
+  width: 40px
+  position: relative
+  margin:auto
+  padding-top: 20px
+  border:5px solid transparent
+  border-radius(100%)
+  transition(ease .3s)
+  cursor: pointer
+
+.bar
+  height: 1px
+  width: 100%
+  display: block
+  margin: 10px auto
+  position: relative
+  background-color: $red
+  border-radius(10px)
+  transition(ease .4s)
+
+
+
+
+.model-2
+  .menu
+    &:hover
+      .bar
+        &:nth-of-type(1)
+          transform: translateY(2px)
+        &:nth-of-type(3)
+          transform: translateY(-2px)
+
+  .bar
+    &:nth-of-type(1)
+      animation: rotateR .25s cubic-bezier(.5, .2, .2, 1)
+    &:nth-of-type(2)
+      animation: fade .25s cubic-bezier(.1, .8, .1, 1)
+    &:nth-of-type(3)
+      animation: rotateL .25s cubic-bezier(.5, .2, .2, 1)
+
+
+.is-active
+  .model-2
+    .menu
+      .bar
+        &:nth-of-type(1)
+          transform: translateY(10px) rotate(45deg)
+        &:nth-of-type(2)
+          opacity: 0
+        &:nth-of-type(3)
+          transform: translateY(-12px) rotate(-45deg)
+
+
+
+
+/*============= Demo  Animation  ================*/
+
+@keyframes mrotr
+  0%
+    transform(translateY(0px) rotate(0))
+  50%
+    transform(translateY(15px) rotate(0))
+  100%
+    transform(translateY(15px) rotate(45deg))
+
+@keyframes mrotl
+  0%
+    transform(translateY(0px) rotate(0))
+  50%
+    transform(translateY(-15px) rotate(0))
+  100%
+    transform(translateY(-15px) rotate(-45deg))
+
+
+@keyframes rotateR
+  from
+    transform(translateY(0px) rotate(0))
+  to
+    transform(translateY(15px) rotate(45deg))
+
+@keyframes rotateL
+  from
+    transform(translateY(0px) rotate(0))
+  to
+    transform(translateY(-15px) rotate(-45deg))
+
+@keyframes circle-creation
+   0%
+     border-color: transparent; rotate(0deg)
+   25%
+     border-color: transparent $red transparent transparent
+     rotate(-35deg);
+   50%
+     border-color: transparent $red  $red transparent
+   75%
+     border-color: transparent $red $red $red
+   100%
+     border-color: $red
+     rotate(-300deg)
+   
+
+
+@keyframes moveUp
+  from
+    translateY(0)
+  to
+    translateY(25px)
+
+
+@keyframes fade
+  from
+    opacity: 1
+  to
+    opacity: 0
