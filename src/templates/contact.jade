@@ -1,0 +1,41 @@
+extends ../_layout
+
+block vars
+  - var page='contact'
+  - var pageTitle = 'Contact'
+
+block content
+
+  .orange.spacer.is-upper
+    .border
+      p &nbsp;
+
+  .slope-left.slope-over.contact
+    article.slope-left-fix
+      .container.animate.fade-in-up
+        .grid.small-grid--full
+          .grid-cell
+            h1.text-center Contact          
+            .grid.orange.circles
+              .circle
+              .circle
+              .circle
+              .circle
+              .circle
+
+            form(name="login", action="/login", method="post").grid-column
+              label(for="name").grid-cell
+                h6 Your Name
+                input(type="text", name="name")#name
+              label(for="email").grid-cell
+                h6 Your Email
+                input(type="email", name="email")#email
+              label(for="message").grid-cell
+                h6 Message
+                textarea(name="", cols="30", rows="10")#message
+              button(type="submit").button.is-large Send
+
+        
+
+
+          

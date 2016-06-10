@@ -23,7 +23,7 @@ nav
   ul
     justify-content: space-between
     a
-      link: $red
+      link: $red 'darken'
 +below($tablet-breakpoint)
   nav
     background-color: rgba($light-gray, 0.95)
@@ -94,13 +94,14 @@ nav
   background-color: $yellow
 .red
   background-color: $red
-  .border
-    background $red url('../img/border.png') top center repeat
-
 .purple
   background-color: $light-purple
-  .border
-    background $light-purple url('../img/border.png') top center repeat
+.orange
+  background-color: $orange
+
+.border
+  background: url('../img/border.png') top center repeat
+
 
 .is-upper
   margin-top: -150px
@@ -133,6 +134,9 @@ nav
 .purple
   .circle
     background-color: $dark-purple
+.orange
+  .circle
+    background-color: $mint
 
 
 
@@ -158,6 +162,29 @@ nav
   color: $white
   padding-bottom: 80px
 
+/*
+----------------------- CONTACT ---------------------- */
+.contact
+  background-color: $orange
+  color: $white
+  padding-bottom: 80px
+
+  form
+    margin: 0 auto
+    width: 60%
+
+  input, textarea
+    background-color: transparent
+    border: none
+    border-bottom: 1px solid rgba($white, 0.5)
+    margin-bottom: 2em
+    outline: none
+    padding: 0 1em 1em
+    transition(ease .3s)
+    width: 100%
+    &:focus
+      border-color: $white
+      border-bottom-width: 2px
 
 
 
@@ -188,13 +215,12 @@ nav
 
   
   nav
-    padding-bottom: 4em
-    padding-top: 2em
+    padding: 4em 0
     
     a
       link: $orange
-      padding: 1em 2em
+      padding: 1em 1.5em
 
   p
+    color: rgba($light-gray, 0.5)
     margin: 0 0 2em
-

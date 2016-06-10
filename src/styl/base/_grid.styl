@@ -24,20 +24,20 @@
   flex: 1
 
   // MODIFIERS
-  &.--full
+  &.cell--full
     flex: 0 0 100%
 
-  &.--1of2
+  &.cell--1of2
     flex: 0 0 50%
 
 
-  &.--1of3
+  &.cell--1of3
     flex: 0 0 33.3333%
 
-  &.--1of4
+  &.cell--1of4
     flex: 0 0 25%
 
-  &.--3of4
+  &.cell--3of4
     flex: 0 0 75%
   
   &.to-right
@@ -45,6 +45,36 @@
     
   &.to-left
     align-self: flex-start
+
+
+
+
+// UNITS => APPLY TO .grid-cell
+.u-full
+  width: 100% !important
+  flex: none !important
+
+.u-1of2
+  width: 50% !important
+  flex: none !important
+
+.u-1of3
+  width: 33.3333% !important
+  flex: none !important
+
+.u-2of3
+  width: 66.6667% !important
+  flex: none !important
+
+.u-1of4
+  width: 25% !important
+  flex: none !important
+
+.u-3of4
+  width: 75% !important
+  flex: none !important
+
+
 
 
 
@@ -71,6 +101,11 @@
       margin-top: 5em
       margin-bottom: 2em
 
+
+
+
+
+// ALIGN COLUMNS TOP CENTER OR BOTTOM of EACH OTHER => APPLY TO .grid
 .grid--top
   align-items: flex-start
 
@@ -87,6 +122,11 @@
   justify-content: center
 
 
+
+
+
+
+// ALIGN INDIVIDUAL CELL TOP CENTER OR BOTTOM => APPLY TO .grid-cell
 .grid-cell--top
   align-self: flex-start
 
@@ -101,6 +141,13 @@
 
 .grid-cell--autoSize
   flex: none
+
+
+
+
+
+
+
 
 
 .grid--fit > .grid-cell
@@ -121,6 +168,20 @@
 
 .grid--1of4 > .grid-cell
   flex: 0 0 25%
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 +below($tablet-breakpoint)
@@ -186,25 +247,25 @@
 
 
 
-// .grid--gutters
-//   margin: -1em 0 1em -1em
+.grid--gutters
+  margin: -1em 0 1em -1em
 
-// .grid--gutters > .grid-cell
-//   padding: 1em 0 0 1em
-
-
-// .grid--guttersLg
-//   margin: -1.5em 0 1.5em -1.5em
-
-// .grid--guttersLg > .grid-cell
-//   padding: 1.5em 0 0 1.5em
+.grid--gutters > .grid-cell
+  padding: 1em 0 0 1em
 
 
-// .grid--guttersXl
-//   margin: -2em 0 2em -2em
+.grid--guttersLg
+  margin: -1.5em 0 1.5em -1.5em
 
-// .grid--guttersXl > .grid-cell
-//   padding: 2em 0 0 2em
+.grid--guttersLg > .grid-cell
+  padding: 1.5em 0 0 1.5em
+
+
+.grid--guttersXl
+  margin: -2em 0 2em -2em
+
+.grid--guttersXl > .grid-cell
+  padding: 2em 0 0 2em
 
 
 +below($tablet-breakpoint)

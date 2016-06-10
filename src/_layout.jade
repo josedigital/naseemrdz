@@ -1,7 +1,8 @@
+block vars
 doctype html
 html
   head
-    title Title Site
+    title #{pageTitle}
     meta(charset='UTF-8')
     meta(http-equiv='X-UA-Compatible', content='IE=edge')
     meta(name='description' content="meta desc")
@@ -10,7 +11,7 @@ html
 
   body
 
-    button.mod.model-2.hide-desktop
+    button.menu-button.stacked.hide-desktop
       .menu
         .bar
         .bar
@@ -39,13 +40,12 @@ html
               li
                 a(href="") CV
               li
-                a(href="") Contact
+                a(href="contact.html") Contact
 
 
-    
+
     section.slope-container
       block content
-
       .quotes
         article
           .container
@@ -54,7 +54,6 @@ html
                 p.font-bold.
                   Go and make interesting mistakes, make amazing mistakes, make glorious and fantastic mistakes. Break rules. Leave the world more interesting for your being here. 
                 p <span class="right"> - Neil Gaiman</span>
-
 
 
 
@@ -75,11 +74,8 @@ html
               li
                 a(href="") CV
               li
-                a(href="") Contact
+                a(href="contact.html") Contact
           
-
-        p.text-center.
-          Feel free to reach out to me on any of my social media links below. I am happy to start a conversation with you.
 
         .grid.grid--center
           .grid-cell
@@ -97,7 +93,6 @@ html
                 Rodriguez
 
         p.text-right All information written or curated by Noreen unless otherwise expressed.
-
 
     script(src="https://cdnjs.cloudflare.com/ajax/libs/cash/1.3.0/cash.min.js")
     script(type="text/javascript", src="js/main.js")
