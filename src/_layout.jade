@@ -11,25 +11,25 @@ html
 
   body
 
-    button.menu-button.stacked.hide-desktop
-      .menu
-        .bar
-        .bar
-        .bar
+    button.Stackednav__button.hide-desktop
+      .Stackednav__trigger.js-nav-trigger
+        .Stackednav__bar
+        .Stackednav__bar
+        .Stackednav__bar
 
 
 
-    header
+    .Site__header
       .container
         .grid.grid--center
           .grid-cell
-            h1.logo.
+            h1.Site__logo.
               Noreen
               <br>
               Naseem
               <br>
               Rodriguez
-          nav.grid-cell
+          .Site__nav.grid-cell
             ul.grid.grid-column--small.uppercase
               li
                 a(href="/") Bio
@@ -38,13 +38,13 @@ html
               li
                 a(href="publications.html") Publications
               li
-                a(href="") CV
+                a(href="cv.html") CV
               li
                 a(href="contact.html") Contact
 
 
 
-    section.slope-container
+    section.Slope-container
       block content
       .quotes
         article
@@ -85,7 +85,7 @@ html
           .grid-cell
             p google
           .grid-cell
-            h1.logo.text-right.
+            h1.Site__logo.text-right.
                 Noreen
                 <br>
                 Naseem

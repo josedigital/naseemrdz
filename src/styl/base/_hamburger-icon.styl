@@ -1,5 +1,5 @@
 
-button.menu-button
+.Stackednav__button
   background-color: transparent
   border: none
   outline: none
@@ -8,7 +8,7 @@ button.menu-button
   right: 5%
   z-index: 200
 
-.menu
+.Stackednav__trigger
   height: 40px
   width: 40px
   position: relative
@@ -18,41 +18,24 @@ button.menu-button
   transition(ease .3s)
   cursor: pointer
 
-.bar
+    
+
+.Stackednav__bar
   height: 1px
-  width: 100%
   display: block
   margin: 10px auto
   position: relative
   background-color: $red
   border-radius(10px)
   transition(ease .4s)
-
-
-
-
-.stacked
-  .menu
-    &:hover
-      .bar
-        &:nth-of-type(1)
-          transform: translateY(2px)
-        &:nth-of-type(3)
-          transform: translateY(-2px)
-
-  .bar
-    &:nth-of-type(1)
-      animation: rotateR .25s cubic-bezier(.5, .2, .2, 1)
-    &:nth-of-type(2)
-      animation: fade .25s cubic-bezier(.1, .8, .1, 1)
-    &:nth-of-type(3)
-      animation: rotateL .25s cubic-bezier(.5, .2, .2, 1)
+  width: 100%
+\
 
 
 .is-active
-  .model-2
-    .menu
-      .bar
+  .Stackednav__button
+    .Stackednav__trigger
+      .Stackednav__bar
         &:nth-of-type(1)
           transform: translateY(10px) rotate(45deg)
         &:nth-of-type(2)

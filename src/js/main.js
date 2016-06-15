@@ -1,10 +1,12 @@
 $(function() {
 
   var $body = $('body'),
-      $menu = $('.menu');
+      $trigger = $('.js-nav-trigger'),
+      $bio = $('.full-bio'),
+      $viewbio = $('.js-view-bio');
 
-  $menu.on('click', function() {
-    ($menu, $body).toggleClass('is-active');  
+  $trigger.on('click', function() {
+    ($trigger, $body).toggleClass('is-active'); 
   });
   
 

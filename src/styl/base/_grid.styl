@@ -14,7 +14,7 @@
 
 .grid-column
   flex-direction: column
-  // responsive
+  // responsive - turn into column for small screens: .grid.grid-column--small
   +below($tablet-breakpoint)
     &--small
       flex-direction: column
@@ -82,14 +82,7 @@
 .grid--flexCells > .grid-cell
   display: flex
 
-.grid-gutters
-  .grid-cell
-    padding-left: 2%
-    padding-right: 2%
-  &--large
-    .grid-cell
-      padding-left: 5%
-      padding-right: 5%
+
 
 
 .grid-margins

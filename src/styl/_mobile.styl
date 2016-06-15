@@ -1,6 +1,6 @@
 /*
 ----------------------- HEADER ---------------------- */
-header
+.Site__header
   background-color: $white
   border-bottom: 1px solid $light-gray
   box-shadow: 0px -5px 10px rgba(0,0,0,0.3)
@@ -11,21 +11,22 @@ header
   width: 100%
   z-index: 100
 
-.logo
+.Site__logo
   font-size: rem(16px)
   line-height: 1
 
 /*
 ----------------------- SITE NAV ---------------------- */
-nav
+.Site__nav
   font-family: $sans-serif
   transition: 0.3s $ease-out-swift
   ul
     justify-content: space-between
     a
+      display: block
       link: $red 'darken'
 +below($tablet-breakpoint)
-  nav
+  .Site__nav
     background-color: rgba($light-gray, 0.95)
     box-shadow: 0px 0 5px rgba(0,0,0,0.2)
     height: 100vh
@@ -37,13 +38,17 @@ nav
     .is-active &
       right: 0%
     ul
-      height: 30%
+      height: 60%
+      a
+        padding: 1em
+        &:hover
+          text-decoration: none
 
 
 
 /*
 ----------------------- SLOPE CONTAINER + SLOPES + FIXES ---------------------- */
-.slope-container
+.Slope-container
   background-color: $white
   display: block
   width: 100%
@@ -51,34 +56,34 @@ nav
   padding-top: 100px
 
 //------------------ SLOPE DIRECTIONS
-.slope-left
+.Slope__left
   margin: 0 -150px
   transform: rotate(-7deg)
   transform-origin: left center
   .container
     width: 60%
-.slope-right
+.Slope__right
   margin: 0 -50px
   transform: rotate(7deg)
   transform-origin: left center
 
 //------------------ SLOPE FIXES
-.slope-left-fix
+.Slope__left--fix
   margin: 0 auto
   transform: rotate(7deg)
   width: 80%
-.slope-right-fix
+.Slope__right--fix
   margin: 0 auto
   transform: rotate(-7deg)
   width: 80%
 
 
 //------------------ SLOPE Z POSITIONS
-.slope-over
+.Slope__content--over
   box-shadow: 0px 8px 10px rgba(0,0,0,0.2)
   position: relative
   z-index: 5
-.slope-under
+.Slope__content--under
   box-shadow: 0px -5px 10px rgba(0,0,0,0.3)
   position: relative
   z-index: 1
@@ -128,13 +133,13 @@ nav
   margin-right: 3px
   width: 20px
   border-radius: 50%
-.orange
+.red
   .circle
     background-color: $orange
 .purple
   .circle
     background-color: $dark-purple
-.orange
+.orange, .white
   .circle
     background-color: $mint
 
@@ -147,7 +152,15 @@ nav
   background-color: $white
   padding-bottom: 80px
 
-    
+.full-bio
+  height: 0
+  display: none
+  transition()
+  
+  &.animate
+    height: auto
+    display: block
+
 /*
 ----------------------- RESOURCES ---------------------- */
 .resources
@@ -163,6 +176,33 @@ nav
   padding-bottom: 80px
 
 /*
+----------------------- CV ---------------------- */
+.cv
+  background-color: $white
+  padding-bottom: 3em
+  
+  .grid-cell
+    // border-bottom: 1px solid lighten($dark-primary, 80%)
+    margin-bottom: 1.5em
+    padding-bottom: 1.5em
+    // &:not(:first-child)
+    &:after
+      background-color: #212121;
+      content: '';
+      display: block;
+      height: 1px;
+      margin: 1.5em 0;
+      position: relative;
+      width: 5em;
+    
+  
+  .title
+    font-family: $serif
+    font-size: rem(16px)
+    text-transform: none
+    
+
+/*
 ----------------------- CONTACT ---------------------- */
 .contact
   background-color: $orange
@@ -171,20 +211,21 @@ nav
 
   form
     margin: 0 auto
-    width: 60%
+    +above($tablet-breakpoint)
+      width: 60%
 
   input, textarea
     background-color: transparent
     border: none
     border-bottom: 1px solid rgba($white, 0.5)
     margin-bottom: 2em
+    letter-spacing: 0.075em
     outline: none
     padding: 0 1em 1em
     transition(ease .3s)
     width: 100%
     &:focus
       border-color: $white
-      border-bottom-width: 2px
 
 
 
